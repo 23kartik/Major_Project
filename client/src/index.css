@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(20,9,65);
+  background-attachment:fixed;
+  background-size:cover;
+  background-image: url("123.png");
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.chatHeight {
+  height: calc(100vh - 64px);
+  /* overflow: hidden; */
+}
+
+@media only screen and (max-width: 600px) {
+  .chatHeight {
+    height: calc(100vh - 56px);
+  }
+}
+
+.messageDiv {
+  height: calc(100vh - 159.91px);
+}
