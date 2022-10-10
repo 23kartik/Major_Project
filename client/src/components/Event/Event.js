@@ -137,8 +137,8 @@ const Event = () => {
         <br/><br/>    <br/><br/>    <br/><br/>   
         <div>
           <div style={{marginLeft:"1cm"}}>
-          <h1 className={classes.fgh} class="rty">So which ones to apply for?<span class="rty" ><div style={{marginLeft:"15cm"}}>
-<img src={fang}/>
+          <h1 className={classes.fgh} class="rty">In the age of programming and tech geeks, there are humongous hackathons and coding challanges taking place every day!<br/><br/> So which ones to apply for?<span class="rty" ><div style={{marginLeft:"15cm"}}>
+<img class="cvb" src={fang}/>
 </div>Explore perfectly curated list of challanges liked and recommend by pros to boost up your skills!</span></h1>
 </div><br/>
 <div className={classes.qwe}>
