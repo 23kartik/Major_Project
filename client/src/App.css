@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&display=swap');
 .abc{
     font-family: 'Shadows Into Light', cursive;
     font-size: 55px;
     font-weight:900;
     color: rgb(225, 71, 97);
     text-decoration: none;
+}
+.rty{
+    font-size: 55px;
+    font-weight:900;
+   
+    color: white;
+    font-family: 'EB Garamond', serif;
 }

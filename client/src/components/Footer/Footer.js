@@ -12,14 +12,11 @@ const Footer = () => {
         <br/>  <br/> <br/>
         
         <footer class="footer-distributed mt-auto">
-        
-                    <div class="footer-left">
-        
-                    <img
+            <div class="footer-left">
+            <img
         src={vd}
         height="100px"
         alt="Third slide"
-        
       />
         
                         <p class="footer-links">

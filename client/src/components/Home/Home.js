@@ -80,84 +80,87 @@ const Home = () => {
         {" "}
         TRENDING EVENTS
       </h1>
-    <Carousel index={activeChild} autoPlay={true} navButtonsAlwaysVisible>
+      <Carousel index={activeChild} autoPlay={true} navButtonsAlwaysVisible>
     <Carousel.Item>
+      <a href="https://www.codechef.com">
       <img
         className="d-block w-100"
         src="https://media.geeksforgeeks.org/wp-content/uploads/20220427142321/TopWebsitesForCodingChallengesCompetitions.jpg"
         alt="First slide"
         height="600px"
       />
-
+</a>
     </Carousel.Item>
     <Carousel.Item>
+    <a href="https://atcoder.jp/">
       <img
         className="d-block w-100"
         src="https://img.atcoder.jp/zone2021/7b005dd8b143aec06f75077c226ff376.png"
         alt="Second slide"
         height="600px"
       />
-
+</a>
 
     </Carousel.Item>
     <Carousel.Item>
+    <a href="https://www.codechef.com/CHIL2020">
       <img
         className="d-block w-100"
         src="https://cdn.codechef.com/download/small-banner/CHIL2020/1596948867.jpg"
         alt="Third slide"
         height="600px"
       />
-
+</a>
     </Carousel.Item>
     <Carousel.Item>
+    <a href="https://www.hackerrank.com/dtcc-codeathon-challenge">
       <img
         className="d-block w-100"
-        src="https://cdn.codechef.com/download/small-banner/CHIL2020/1596948867.jpg"
+        src="https://hrcdn.net/s3_pub/istreet-assets/-Nl0DJkFlHJFO3Rl-FuwOQ/Rd%2002-26918_HackerRank%20Code-A-Thon_Twitter_1024x512.jpg"
         alt="Third slide"
         height="600px"
       />
-
+</a>
     </Carousel.Item>
     <Carousel.Item>
+    <a href="https://leetcode.com/">
       <img
         className="d-block w-100"
         src="https://assets.leetcode.com/static_assets/marketing/%E5%B9%BF%E5%91%8A_Banner.png"
         alt="Third slide"
         height="600px"
       />
-
+</a>
     </Carousel.Item>
     <Carousel.Item>
+    <a href="https://leetcode.com/contest/weekly-contest-315/">
       <img
         className="d-block w-100"
         src="https://pbs.twimg.com/media/FGw88HCVQAQpnxt.png"
         alt="Third slide"
         height="600px"
       />
-      <Carousel.Caption>
-        <h3>Third slide label</h3>
-        <p>
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-        </p>
-      </Carousel.Caption>
+</a>
     </Carousel.Item>
     <Carousel.Item>
+    <a href="https://leetcode.com/contest/biweekly-contest-89/">
       <img
         className="d-block w-100"
         src="https://pbs.twimg.com/media/FKUoi_VUUAMKBcv.png"
         alt="Third slide"
         height="600px"
       />
-
+</a>
     </Carousel.Item>
     <Carousel.Item>
+    <a href="https://leetcode.com/">
       <img
         className="d-block w-100"
         src={lt}
         alt="Third slide"
         height="600px"
       />
-
+</a>
     </Carousel.Item>
   </Carousel> 
       <Grow in>

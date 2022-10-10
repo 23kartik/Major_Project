@@ -100,6 +100,7 @@ const PostScreen = ({ history, match }) => {
     }
   };
   return !post ? (
+ 
     <CircularProgress />
   ) : (
     <Container maxWidth="lg" className={classes.container}>
