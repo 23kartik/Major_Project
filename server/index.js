@@ -107,7 +107,7 @@ const PORT = process.env.PORT || 8080;
 
 mongoose
   .connect(
-    "mongodb+srv://admin:admin@cluster0.9i1az.mongodb.net/?retryWrites=true&w=majority",
+    process.env.CONNECTION_URL,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,

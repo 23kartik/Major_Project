@@ -1,7 +1,5 @@
 import React from "react";
-import {
-    Paper
-  } from "@material-ui/core";
+import {Paper} from "@material-ui/core";
 import "./About.css"
 const About = () => {
   return(
@@ -15,7 +13,7 @@ const About = () => {
 
             <div class = "content">
                 <h2>About Us</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis aspernatur voluptas inventore ab voluptates nostrum minus illo laborum harum laudantium earum ut, temporibus fugiat sequi explicabo facilis unde quos corporis!</p>
+                <p>Event Hub is a one stop destinaton for all programmers and workng professionals to keep track of events taking place on any platform. Users dont have to go any other platform, they just have to come to Event Hub and they can see whatever event is happening on whichever platform. In the end, they wont have any regrets of missing out on any opportunity</p>
     
                 <ul class = "icons">
                     <li>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-
+import { Link } from "react-router-dom";
 import './Footer.css';
 import vd from "./void.png";
 
@@ -18,13 +18,15 @@ const Footer = () => {
         height="100px"
         alt="Third slide"
       />
-        
+   
                         <p class="footer-links">
-                        <a href="/home" class="link-1">Upcoming Contests</a>
+
+                        <Link to="/home" class="link-1">Upcoming Contests</Link>
                             
-                            <a href="/about">About</a>  
+                            <Link to="/about">About</Link>  
                             
-                            <a href="/contact">Contact</a>
+                            <Link to="/contact">Contact</Link>
+                            <Link to="/analytics">Analytics</Link>
                             
                         </p>
 
@@ -55,8 +57,7 @@ const Footer = () => {
         
                         <p class="footer-company-about">
                             <span>About the Website</span>
-                            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
-                        </p>
+                            Event Hub is a one stop destinaton for all programmers and workng professionals to keep track of events taking place on any platform                        </p>
 
                         <div class="footer-icons">
         

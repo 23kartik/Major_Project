@@ -2,7 +2,7 @@ import { default as mongodb } from "mongodb";
 
 let MongoClient = mongodb.MongoClient;
 const client = new MongoClient(
-  "mongodb+srv://admin:admin@cluster0.9i1az.mongodb.net/?retryWrites=true&w=majority"
+  process.env.CONNECTION_URL
 );
 await client.connect();
 const db = client.db();
