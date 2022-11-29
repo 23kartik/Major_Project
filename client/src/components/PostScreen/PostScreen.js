@@ -96,7 +96,7 @@ const PostScreen = ({ history, match }) => {
     if (user?.result) {
       document.getElementById("comment").focus();
     } else {
-      history.push("/auth");
+      history.push("/userauth");
     }
   };
   return !post ? (
@@ -278,7 +278,7 @@ const PostScreen = ({ history, match }) => {
                   <div>
                     <hr className={classes.horizontal} />
                     <div style={{ textAlign: "center", paddingBottom: "5px" }}>
-                      <Link to="/auth" style={{ textDecoration: "none" }}>
+                      <Link to="/userauth" style={{ textDecoration: "none" }}>
                         Login
                       </Link>{" "}
                       to like or comment{" "}

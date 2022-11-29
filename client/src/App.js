@@ -12,7 +12,8 @@ import { SET_ONLINE_USERS } from "./constants/actionTypes";
 
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
-import Auth from "./components/Auth/Auth";
+import UserAuth from "./components/Auth/UserAuth";
+import AdminAuth from "./components/Auth/AdminAuth";
 import PostScreen from "./components/PostScreen/PostScreen";
 import Chat from "./components/Chat/Chat";
 import useStyles from "./styles";
@@ -21,7 +22,8 @@ import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
 import Footer from "./components/Footer/Footer.js"
 import Analytics from "./components/Analytics/Analytics.js"
-
+import UserStats from "./components/Xtras/UserStats.js"
+import Timeline from "./components/Xtras/Timeline.js"
 
 import './scss/style.scss'
 const App = () => {
@@ -76,7 +78,12 @@ const App = () => {
         <Route path="/home" exact component={Home} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/about" exact component={About} />
-        <Route path="/auth" exact component={Auth} />
+        <Route path="/userauth" exact component={UserAuth} />
+        <Route path="/adminauth" exact component={AdminAuth} />
+        <Route path="/userstats" exact component={UserStats} />
+        <Route path="/timeline" exact component={Timeline} />
+        {/* <Route path="/adminauth" exact component={AdminAuth} /> */}
+
         <Route path="/analytics" exact component={Analytics} />
         <Route path="/post/:id" exact component={PostScreen} />
         <Route path="/chat" exact component={Chat} />
