@@ -36,7 +36,7 @@ const Analytics = () => {
    
       <div className="body flex-grow-1 px-3">
       <AdminStats/>
-      <Graphs/>
+      {/* <Graphs/> */}
       </div>
     </div>
   </div>

@@ -24,6 +24,20 @@ import Footer from "./components/Footer/Footer.js"
 import Analytics from "./components/Analytics/Analytics.js"
 import UserStats from "./components/Xtras/UserStats.js"
 import Timeline from "./components/Xtras/Timeline.js"
+import UserSidenav from "./components/Xtras/UserSidenav.js"
+import Userperforma from "./components/Xtras/Userperforma";
+import Graphs from "./components/Xtras/Graphs";
+
+import UserActivity from "./components/Xtras/UserActivity.js";
+import PlatformStats from "./components/Xtras/PlatformStats.js";
+import Favourite from "./components/Xtras/Favourite.js";
+import PlatformActivity from "./components/Xtras/PlatformActivity.js"
+import UserPerformance from "./components/Xtras/UserPerformance";
+
+import Analyse from "./components/Xtras/Analyse";
+
+
+
 
 import './scss/style.scss'
 const App = () => {
@@ -83,13 +97,24 @@ const App = () => {
         <Route path="/userstats" exact component={UserStats} />
         <Route path="/timeline" exact component={Timeline} />
         {/* <Route path="/adminauth" exact component={AdminAuth} /> */}
-
+        <Route path="/usersidenav" exact component={UserSidenav} />
+        <Route path="/userperforma" exact component={Userperforma} />
         <Route path="/analytics" exact component={Analytics} />
+
+        <Route path="/favourite" exact component={Favourite} />
+        <Route path="/useractivity" exact component={UserActivity} />
+        <Route path="/platformstats" exact component={PlatformStats} />
+        <Route path="/platformactivity" exact component={PlatformActivity} />
+        <Route path="/userperformance" exact component={UserPerformance} />
+        <Route path="/analyse" exact component={Analyse} />
+
         <Route path="/post/:id" exact component={PostScreen} />
         <Route path="/chat" exact component={Chat} />
+        <Route path="/graphs" exact component={Graphs} />
+
       </Switch>
       
-      
+     
       <Footer/>
      
      

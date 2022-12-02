@@ -27,23 +27,29 @@ const UserSidenav = () => {
     <ul class="sidebar-nav">
       <li class="nav-title">STATISTICS</li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="nav-icon cil-speedometer"></i> Stats
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/UserStats">
+        <a class="nav-link" href="/userperforma">
           <i class="nav-icon cil-speedometer"></i> Recommender
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/platformstats">
           <i class="nav-icon cil-speedometer"></i> Platform Stats
         </a>
       </li>
+      
       <li class="nav-item">
-        <a class="nav-link" href="/timeline">
-          <i class="nav-icon cil-speedometer"></i> User 
+        <a class="nav-link" href="/favourite">
+          <i class="nav-icon cil-speedometer"></i> Favourite Site
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/useractivity">
+          <i class="nav-icon cil-speedometer"></i> User Activity
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/platformactivity">
+          <i class="nav-icon cil-speedometer"></i> Platform Activity
         </a>
       </li>
       

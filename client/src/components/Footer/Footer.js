@@ -8,14 +8,14 @@ import vd from "./void.png";
 
 const Footer = () => {
     return (
-        <div class="d-flex flex-column min-vh-100">
+        <div class="d-flex flex-column min-vh-100 xyz">
         <br/>  <br/> <br/>
         
         <footer class="footer-distributed mt-auto">
             <div class="footer-left">
             <img
         src={vd}
-        height="100px"
+        style={{height:"1cm"}}
         alt="Third slide"
       />
    

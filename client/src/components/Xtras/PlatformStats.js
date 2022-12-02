@@ -10,171 +10,18 @@ import {
   CChartPolarArea,
   CChartRadar,
 } from '@coreui/react-chartjs'
-import  DocsCallout  from '../Analytics/DocsCallout.js'
-import '../Analytics/Analytics.css'
-
-const Graphs = () => {
+import UserSidenav from './UserSidenav';
+const PlatformStats = () => {
   const random = () => Math.round(Math.random() * 50)+1
   const randomise = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
   return (
-    <Container>
-    <CRow>
-      <CCol xs={12}>
-       <br />
-      
-         <DocsCallout
-           name="Chart"
-           href="components/chart"
-           content="Content Goes Here"
-         /><br />
- 
-       </CCol>
-       <CCol xs={6}>
-         <CCard className="mb-4">
-           <CCardHeader>Site Traffic </CCardHeader>
-           <CCardBody>
-             <CChartBar
-               data={{
-                 labels: ['Codeforces', 'Codechef', 'Leetcode', 'AtCoder', 'Hackerrank', 'Hackerearth', 'CSES'],
-                 datasets: [
-                   {
-                     label: 'Events',
-                     backgroundColor: ['purple', 'brown', 'yellow', 'red', 'lightgreen', 'skyblue', 'pink'],
-                     data:[random(), random(), random(), random(), random(), random(), random()],
-                   },
-                  
-                 ],
-               }}
-               labels="CodingPlatform"
-             />
-           </CCardBody>
-         </CCard>
-       </CCol>
-       {/* <CCol xs={6}>
-         <CCard className="mb-4">
-           <CCardHeader>Line Chart</CCardHeader>
-           <CCardBody>
-             <CChartLine
-               data={{
-                 labels: ['Codeforces', 'Codechef', 'Leetcode', 'Atcoder', 'Hackerrank', 'June', 'CSES'],
-                 datasets: [
-                   {
-                     label: 'Codeforces',
-                     backgroundColor: 'purple',
-                     borderColor: 'purple',
-                     pointBackgroundColor: 'purple',
-                     pointBorderColor: 'black',
-                     data: [random(), random(), random(), random(), random(), random(), random()],
-                   },
-                   {
-                     label: 'Codechef',
-                     backgroundColor: 'brown',
-                     borderColor: 'brown',
-                     pointBackgroundColor: 'brown',
-                     pointBorderColor: 'black',
-                     data: [random(), random(), random(), random(), random(), random(), random()],
-                   },
-                   {
-                     label: 'Leetcode',
-                     backgroundColor: 'yellow',
-                     borderColor: 'yellow',
-                     pointBackgroundColor: 'yellow',
-                     pointBorderColor: 'black',
-                     data: [random(), random(), random(), random(), random(), random(), random()],
-                   },
-                   {
-                     label: 'Atcoder',
-                     backgroundColor: 'red',
-                     borderColor: 'red',
-                     pointBackgroundColor: 'red',
-                     pointBorderColor: 'black',
-                     data: [random(), random(), random(), random(), random(), random(), random()],
-                   },{
-                     label: 'Hackerrank',
-                     backgroundColor: 'lightgreen',
-                     borderColor: 'lightgreen',
-                     pointBackgroundColor: 'lightgreen',
-                     pointBorderColor: 'black',
-                     data: [random(), random(), random(), random(), random(), random(), random()],
-                   },
-                   {
-                     label: 'Hackerearth',
-                     backgroundColor: 'skyblue',
-                     borderColor: 'skyblue',
-                     pointBackgroundColor: 'skyblue',
-                     pointBorderColor: 'black',
-                     data: [random(), random(), random(), random(), random(), random(), random()],
-                   },
-                   {
-                     label: 'CSES',
-                     backgroundColor: 'pink',
-                     borderColor: 'pink',
-                     pointBackgroundColor: 'pink',
-                     pointBorderColor: 'black',
-                     data: [random(), random(), random(), random(), random(), random(), random()],
-                   },
-                 ],
-               }}
-             />
-           </CCardBody>
-         </CCard>
-       </CCol> */}
-       <CCol xs={6}>
-         <CCard className="mb-4">
-           <CCardHeader>Topic Specific Stats</CCardHeader>
-           <CCardBody>
-             <CChartDoughnut
-               data={{
-                 labels: ['Codeforces', 'Codechef', 'Leetcode', 'AtCoder', 'Hackerrank', 'Hackerearth', 'CSES'],
-              datasets: [
-                   {
-                     backgroundColor: ['purple', 'brown', 'yellow', 'red', 'lightgreen', 'skyblue', 'pink'],
-                     data: [55, 45, 67, 78, 20, 11, 69],
-                   },
-                 ],
-               }}
-             />
-           </CCardBody>
-         </CCard>
-       </CCol>
-       <CCol xs={6}>
-         <CCard className="mb-4">
-           <CCardHeader>Most viewed Platform</CCardHeader>
-           <CCardBody>
-             <CChartPie
-               data={{
-                 labels: ['Codeforces', 'Codechef', 'Leetcode', 'Atcoder', 'Hackerrank', 'June', 'CSES'],   
-                 datasets: [
-                   {
-                     data: [random(), random(), random(), random(), random(), random(), random()],
-                     backgroundColor: ['purple', 'brown', 'yellow', 'red', 'lightgreen', 'skyblue', 'pink'],
-                     backgroundColor: ['purple', 'brown', 'yellow', 'red', 'lightgreen', 'skyblue', 'pink'],
-                   },
-                 ],
-               }}
-             />
-           </CCardBody>
-         </CCard>
-       </CCol>
-       <CCol xs={6}>
-         <CCard className="mb-4">
-           <CCardHeader>Most Liked Platform</CCardHeader>
-           <CCardBody>
-             <CChartPolarArea
-               data={{
-                 labels: ['Codeforces', 'Codechef', 'Leetcode', 'Atcoder', 'Hackerrank', 'Hackerearth', 'CSES'],   
-                 datasets: [
-                   {
-                     data: [random(), random(), random(), random(), random(), random(), random()],
-                     backgroundColor: ['purple', 'brown', 'yellow', 'red', 'lightgreen', 'skyblue', 'pink'],
-                   },
-                 ],
-               }}
-             />
-           </CCardBody>
-         </CCard>
-       </CCol>
-       <CCol xs={12}>
+    <div>
+    <UserSidenav/>
+    <div  className="wrapper d-flex flex-column min-vh-100 ">
+   
+      <div style={{marginTop:"-111cm"}} className="body flex-grow-1 px-3">
+      <CRow >
+      <CCol xs={6}>
          <CCard className="mb-4">
            <CCardHeader>Domain Specific Stats</CCardHeader>
            <CCardBody>
@@ -250,7 +97,7 @@ const Graphs = () => {
          </CCard>
        </CCol>
        <span >
-    <CCol sm={18}>
+    <CCol sm={6}>
          <CCard className="mb-4">
            <CCardHeader>Spontanity</CCardHeader>
            <CCardBody>
@@ -320,9 +167,11 @@ const Graphs = () => {
          </CCard>
        </CCol>
     </span>
-     </CRow>
-     </Container>
+       </CRow>
+      </div>
+    </div>
+  </div>
   )
 }
 
-export default Graphs
+export default PlatformStats

@@ -1,11 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 
-html,
-body {
-   margin:0;
-   padding:0;
-   height:100%;
-}
+
 #container {
     min-height:100%;
     position:relative;
@@ -33,7 +28,7 @@ section {
   width: 100%;
   display: inline-block;
   background: #333;
-  height: 50vh;
+  height: 110vh;
   text-align: center;
   font-size: 22px;
   font-weight: 700;
@@ -198,9 +193,10 @@ section {
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
-/* .xyz{
-margin-bottom: 100%;
-} */
+.xyz{
+margin-bottom: -10cm;
+height: 5cm;
+}
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
@@ -223,3 +219,4 @@ margin-bottom: 100%;
 	}
 
 }
+

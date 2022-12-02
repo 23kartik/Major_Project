@@ -87,6 +87,7 @@ const AdminStats = () => {
     <div>
    <Container style={{marginTop:"-92cm"}} className="mb-4" >
    <Container><br/>
+   
    <CRow>
        <CCol sm={6} lg={3}>
          <CWidgetStatsA
@@ -379,7 +380,7 @@ const AdminStats = () => {
      <CCardBody>
            <CRow>
              <CCol sm={5}>
-               <h4 id="traffic" className="card-title mb-0"style={{color:"white"}}>
+               <h4 id="traffic" className="card-title mb-0" style={{color:"white"}}>
                  Traffic
                </h4>
                <div style={{color:"white"}}>January - Nov 2022</div>
