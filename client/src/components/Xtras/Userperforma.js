@@ -7,8 +7,10 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import './Userperforma.css'
 import './Output.css'
-import { CCard } from '@coreui/react';
 
+import {Container, Paper} from "@material-ui/core";
+import { CCard, CCardBody, CCol, CCardHeader, CRow } from '@coreui/react'
+import  DocsCallout  from '../Analytics/DocsCallout.js'
 
 import './User.scss'
 
@@ -70,9 +72,18 @@ const Userperforma = () => {
   return (
     <div>
     <UserSidenav/>
-    <div className="wrapper d-flex flex-column min-vh-100 ">
-   
-      <div style={{marginTop:"-111cm"}}  className="body flex-grow-1 px-3">
+    <Container style={{marginLeft:"6.5cm"}}  className="wrapper d-flex flex-column min-vh-100 ">
+    <CCol xs={11}>
+       <br />
+      
+         <DocsCallout
+           name="Chart"
+           href="components/chart"
+           content="Content Goes Here"
+         /><br />
+ 
+       </CCol>
+      <div  className="body flex-grow-1 px-3">
       
      <div className="form_wrapper">
   <div className="form_container">
@@ -212,7 +223,7 @@ const Userperforma = () => {
 
         
       </div>
-    </div>
+    </Container>
   </div>
   )
 }

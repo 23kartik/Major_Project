@@ -35,7 +35,7 @@ import PlatformActivity from "./components/Xtras/PlatformActivity.js"
 import UserPerformance from "./components/Xtras/UserPerformance";
 
 import Analyse from "./components/Xtras/Analyse";
-
+import Admin from "./components/Xtras/Admin";
 
 
 
@@ -110,7 +110,7 @@ const App = () => {
 
         <Route path="/post/:id" exact component={PostScreen} />
         <Route path="/chat" exact component={Chat} />
-        <Route path="/graphs" exact component={Graphs} />
+        <Route path="/admin" exact component={Admin} />
 
       </Switch>
       

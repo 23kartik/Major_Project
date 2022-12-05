@@ -10,6 +10,7 @@ import {
   CChartPolarArea,
   CChartRadar,
 } from '@coreui/react-chartjs'
+import "./PlatformActivity.css"
 import  DocsCallout  from '../Analytics/DocsCallout.js'
 import UserSidenav from './UserSidenav';
 const PlatformActivity = () => {
@@ -18,12 +19,8 @@ const PlatformActivity = () => {
   return (
     <div>
     <UserSidenav/>
-    <div  className="wrapper d-flex flex-column min-vh-100 ">
-   
-      <div style={{marginTop:"-113cm"}} className="body flex-grow-1 px-3">
-      <CRow >
-      <CRow>
-      <CCol xs={12}>
+    <Container style={{marginLeft:"6.5cm"}}  className="wrapper d-flex flex-column min-vh-100 ">
+    <CCol xs={11}>
        <br />
       
          <DocsCallout
@@ -33,50 +30,76 @@ const PlatformActivity = () => {
          /><br />
  
        </CCol>
-       <CCol xs={8}>
-         <CCard className="mb-4">
-           <CCardHeader>Site Traffic </CCardHeader>
-           <CCardBody>
-             <CChartBar
-               data={{
-                 labels: ['Codeforces', 'Codechef', 'Leetcode', 'AtCoder', 'Hackerrank', 'Hackerearth', 'CSES'],
-                 datasets: [
-                   {
-                     label: 'Events',
-                     backgroundColor: ['purple', 'brown', 'yellow', 'red', 'lightgreen', 'skyblue', 'pink'],
-                     data:[random(), random(), random(), random(), random(), random(), random()],
-                   },
-                  
-                 ],
-               }}
-               labels="CodingPlatform"
-             />
-           </CCardBody>
-         </CCard>
-       </CCol>
-  
-       <CCol xs={8}>
-         <CCard className="mb-4">
-           <CCardHeader>Topic Specific Stats</CCardHeader>
-           <CCardBody>
-             <CChartDoughnut
-               data={{
-                 labels: ['Codeforces', 'Codechef', 'Leetcode', 'AtCoder', 'Hackerrank', 'Hackerearth', 'CSES'],
-              datasets: [
-                   {
-                     backgroundColor: ['purple', 'brown', 'yellow', 'red', 'lightgreen', 'skyblue', 'pink'],
-                     data: [55, 45, 67, 78, 20, 11, 69],
-                   },
-                 ],
-               }}
-             />
-           </CCardBody>
-         </CCard>
-       </CCol>
-       </CRow>
+   
+      <div className="body flex-grow-1 px-3">
+      <CRow >
+     <Container style={{marginLeft:"5cm", width:"20cm"}}>
+  <CCard className="card">
+    <div className="card-header bg-primary">
+      <h5 className="card-title text-white mt-2" id="exampleModalLabel">Feedback request</h5>
+    </div><br/>
+    <div className="modal-body">
+      <div className="text-center">
+        <i className="far fa-file-alt fa-4x mb-3 text-primary" />
+        <p>
+          <strong>Your opinion matters</strong>
+        </p>
+        <p>
+          Have some ideas how to improve our product?
+          <strong>Give us your feedback.</strong>
+        </p>
+      </div>
+      <hr />
+      <form className="px-4" action>
+        <p className="text-center"><strong>Your rating:</strong></p>
+        <div className="form-check mb-2">
+          <input className="form-check-input" type="radio" name="exampleForm" id="radio3Example1" />
+          <label className="form-check-label" htmlFor="radio3Example1">
+            Very good
+          </label>
+        </div>
+        <div className="form-check mb-2">
+          <input className="form-check-input" type="radio" name="exampleForm" id="radio3Example2" />
+          <label className="form-check-label" htmlFor="radio3Example2">
+            Good
+          </label>
+        </div>
+        <div className="form-check mb-2">
+          <input className="form-check-input" type="radio" name="exampleForm" id="radio3Example3" />
+          <label className="form-check-label" htmlFor="radio3Example3">
+            Medicore
+          </label>
+        </div>
+        <div className="form-check mb-2">
+          <input className="form-check-input" type="radio" name="exampleForm" id="radio3Example4" />
+          <label className="form-check-label" htmlFor="radio3Example4">
+            Bad
+          </label>
+        </div>
+        <div className="form-check mb-2">
+          <input className="form-check-input" type="radio" name="exampleForm" id="radio3Example5" />
+          <label className="form-check-label" htmlFor="radio3Example5">
+            Very bad
+          </label>
+        </div>
+        <p className="text-center"><strong>What could we improve?</strong></p>
+        {/* Message input */}
+        <div className="form-outline mb-4">
+          <textarea className="form-control" id="form4Example3" rows={4} defaultValue={""} /><br/>
+          <label className="form-label" htmlFor="form4Example3">Your feedback</label>
+        </div>
+      </form>
+    </div>
+    <div className="card-footer text-end">
+      <button type="button" className="btn btn-primary">Submit</button>
+    </div>
+  </CCard>
+</Container>
+
+
        </CRow>
       </div>
-    </div>
+    </Container>
   </div>
   )
 }
