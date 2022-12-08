@@ -38,6 +38,12 @@ import Analyse from "./components/Xtras/Analyse";
 import Admin from "./components/Xtras/Admin";
 
 
+import Spontanity from "./components/Xtras/Spontanity";
+import MostLikedPlatform from "./components/Xtras/MostLikedPlatform";
+import MostViewedPlatform from "./components/Xtras/MostViewedPlatform";
+import DomainSpecific from "./components/Xtras/DomainSpecific";
+
+
 
 import './scss/style.scss'
 const App = () => {
@@ -111,6 +117,12 @@ const App = () => {
         <Route path="/post/:id" exact component={PostScreen} />
         <Route path="/chat" exact component={Chat} />
         <Route path="/admin" exact component={Admin} />
+
+        <Route path="/mostliked" exact component={MostLikedPlatform} />
+        <Route path="/mostviewed" exact component={MostViewedPlatform} />
+        <Route path="/spontanity" exact component={Spontanity} />
+        <Route path="/domainspecific" exact component={DomainSpecific} />
+
 
       </Switch>
       

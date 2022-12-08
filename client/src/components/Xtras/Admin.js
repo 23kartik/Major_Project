@@ -5,11 +5,36 @@ import { Container } from '@material-ui/core'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import "./Admin.css"
+import data from "./data.json";
+//components
+
+import ToDoList from "./ToDoList";
+import ToDoForm from './ToDoForm';
 const Admin = () => {
 
   const [activeChild, setActiveChild] = useState(0);
+  const [ toDoList, setToDoList ] = useState(data);
+
+  const handleToggle = (id) => {
+    let mapped = toDoList.map(task => {
+      return task.id === Number(id) ? { ...task, complete: !task.complete } : { ...task};
+    });
+    setToDoList(mapped);
+  }
+
+  const handleFilter = () => {
+    let filtered = toDoList.filter(task => {
+      return !task.complete;
+    });
+    setToDoList(filtered);
+  }
+  const addTask = (userInput ) => {
+    let copy = [...toDoList];
+    copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
+    setToDoList(copy);
+  }
   return (
-    <div>
+    <div class="new3">
     <Sidenav/>
     <Container style={{marginLeft:"5cm"}}  className="wrapper d-flex flex-column min-vh-100 ">
    
@@ -54,7 +79,7 @@ const Admin = () => {
       
       </div>
     </div>
-    <div className="col-sm-12 col-md-6 col-xl-4">
+    {/* <div className="col-sm-12 col-md-6 col-xl-4">
       <div className="h-100 bg-secondary rounded p-4">
         <div className="d-flex align-items-center justify-content-between mb-4">
           <h6 className="mb-0">Calender</h6>
@@ -62,65 +87,28 @@ const Admin = () => {
         </div>
         <div id="calender" />
       </div>
-    </div>
+    </div> */}
     <div className="col-sm-12 col-md-6 col-xl-4">
       <div className="h-100 bg-secondary rounded p-4">
         <div className="d-flex align-items-center justify-content-between mb-4">
-          <h6 className="mb-0">To Do List</h6>
-          
+          <h6 className="mb-0">To Do List</h6>      
         </div>
         <div className="d-flex mb-2">
-          <input className="form-control bg-transparent" type="text" placeholder="Enter task" />
-          <button type="button" className="btn btn-primary ms-2">Add</button>
+        <ToDoForm addTask={addTask}/>   
         </div>
         <div className="d-flex align-items-center border-bottom py-2">
-          <input className="form-check-input m-0" type="checkbox" />
           <div className="w-100 ms-3">
-            <div className="d-flex w-100 align-items-center justify-content-between">
-              <span>Update System Security...</span>
-              <button className="btn btn-sm"><i className="fa fa-times" /></button>
-            </div>
-          </div>
-        </div>
-        <div className="d-flex align-items-center border-bottom py-2">
-          <input className="form-check-input m-0" type="checkbox" />
-          <div className="w-100 ms-3">
-            <div className="d-flex w-100 align-items-center justify-content-between">
-              <span>Ban fraud Profile...</span>
-              <button className="btn btn-sm"><i className="fa fa-times" /></button>
-            </div>
-          </div>
-        </div>
-        <div className="d-flex align-items-center border-bottom py-2">
-          <input className="form-check-input m-0" type="checkbox" defaultChecked />
-          <div className="w-100 ms-3">
-            <div className="d-flex w-100 align-items-center justify-content-between">
-              <span><del>Check Website Traffic...</del></span>
-              <button className="btn btn-sm text-primary"><i className="fa fa-times" /></button>
-            </div>
-          </div>
-        </div>
-        <div className="d-flex align-items-center border-bottom py-2">
-          <input className="form-check-input m-0" type="checkbox" />
-          <div className="w-100 ms-3">
-            <div className="d-flex w-100 align-items-center justify-content-between">
-              <span>Update Protection Settings...</span>
-              <button className="btn btn-sm"><i className="fa fa-times" /></button>
-            </div>
-          </div>
-        </div>
-        <div className="d-flex align-items-center pt-2">
-          <input className="form-check-input m-0" type="checkbox" />
-          <div className="w-100 ms-3">
-            <div className="d-flex w-100 align-items-center justify-content-between">
-              <span>Scan User Profile...</span>
-              <button className="btn btn-sm"><i className="fa fa-times" /></button>
+            <div className="d-flex w-200 ">
+              <div><ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/></div> 
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div className="col-sm-12 col-xl-6">
+    <div className="col-sm-12 col-md-6 col-xl-4">
+      <div className="h-100 bg-secondary rounded p-4">
+        <div className="d-flex  border-bottom py-2">
+          <div className="col-sm-12 col-xl-6">
       <div className="bg-secondary rounded h-100 p-4">
         <h6 className="mb-4">Top Site Users</h6>
         {/* <div className="owl-carousel testimonial-carousel">
@@ -142,19 +130,21 @@ const Admin = () => {
       
       <div class="row">
         <div  class="column">
+          <br/>
         <img
         className="img-fluid rounded-circle mx-auto mb-4"
-        style={{width: 100, height: 100}}
+        style={{width:"25cm", height: 150}}
         src="https://media-exp1.licdn.com/dms/image/C4E03AQFQbmhbAnXweQ/profile-displayphoto-shrink_800_800/0/1624476175361?e=2147483647&v=beta&t=Jk--jZB570Kp-_YF9EF1dQkX1WmUGalL1E8xiQD-cgQ"
         alt="First slide"
       
       />
         </div  >
-        <div class="column">
-          <p>Total Hours : 98 hr</p>
+        <span class="column">
+          <br/>
+          <p>Total Hours : 9 hr</p>
           <p>Total Likes Given : 12 </p>
-          <p>Total Post Created : 9 </p>
-          </div>
+         
+          </span>
       
       </div>
       <h5 className="mb-1">Shreya Rajput</h5>
@@ -164,18 +154,20 @@ const Admin = () => {
    
     <div class="row">
         <div  class="column">
+        <br/>
         <img
         className="img-fluid rounded-circle mx-auto mb-4"
-        style={{width: 100, height: 100}}
+        style={{width: 150, height: 150}}
         src="https://img.freepik.com/premium-photo/indian-programmer-freelancer-using-laptop-working-from-home-student-studying-online-education_219285-751.jpg"
         alt="First slide"
       
       />
         </div  >
         <div class="column">
-        <p>Total Hours : 48 hr</p>
+          <br/>
+        <p>Total Hours : 8 hr</p>
           <p>Total Likes Given : 18 </p>
-          <p>Total Post Created : 6 </p>
+          
         </div>
       
       </div>
@@ -188,11 +180,15 @@ const Admin = () => {
 
       </div>
     </div>
-    <div className="col-sm-12 col-xl-6">
+        </div>
+      </div>
+    </div>
+   
+    {/* <div className="col-sm-12 col-xl-6">
       <div className="bg-secondary rounded h-100 p-4">
         <iframe className="position-relative rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd" frameBorder={0} allowFullScreen aria-hidden="false" tabIndex={0} style={{filter: 'grayscale(100%) invert(92%) contrast(83%)', border: 0}} />
       </div>
-    </div>
+    </div> */}
   </div>
 </div>
 </Container></div>

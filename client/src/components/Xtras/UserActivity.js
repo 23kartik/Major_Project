@@ -98,7 +98,7 @@ const UserActivity = () => {
       <div className="body flex-grow-1 px-3">
       <CRow>
  
- <CCol xs={8}>
+ <CCol xs={6}>
    <CCard className="mb-4">
      <CCardHeader>Site Traffic </CCardHeader>
      <CCardBody>
@@ -120,7 +120,7 @@ const UserActivity = () => {
    </CCard>
  </CCol>
 
- <CCol xs={8}>
+ <CCol xs={5}>
    <CCard className="mb-4">
      <CCardHeader>Topic Specific Stats</CCardHeader>
      <CCardBody>

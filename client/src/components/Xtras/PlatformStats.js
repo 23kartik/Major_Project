@@ -2,6 +2,7 @@ import React from 'react'
 import {Container, Paper} from "@material-ui/core";
 import { CCard, CCardBody, CCol, CCardHeader, CRow } from '@coreui/react'
 import { cilBell, cilEnvelopeOpen, cilList, cilMenu } from '@coreui/icons'
+import { Link } from 'react-router-dom';
 import {
   CChartBar,
   CChartDoughnut,
@@ -25,13 +26,16 @@ const PlatformStats = () => {
          <DocsCallout
            name="Chart"
            href="components/chart"
-           content="Content Goes Here"
+           content="Domain Specific Stats graph gives us insights about each platform and the domain they focuses on.
+           Spontanity referes to the frequency of amount of events posted on different platforms.
+           "
          /><br />
  
        </CCol>
       <div className="body flex-grow-1 px-3">
       <CRow >
-      <CCol xs={8}>
+        
+        <CCol xs={5}>
          <CCard className="mb-3">
            <CCardHeader>Domain Specific Stats</CCardHeader>
            <CCardBody>
@@ -91,7 +95,7 @@ const PlatformStats = () => {
                   },
 
                    {
-                     label: 'Coding Ninjas',
+                     label: 'CSES',
                      backgroundColor: 'rgba(151, 187, 205, 0.2)',
                      borderColor: 'pink',
                      pointBackgroundColor: 'rgba(151, 187, 205, 1)',
@@ -103,12 +107,13 @@ const PlatformStats = () => {
                  ],
                }}
              />
+              <Link to="/domainspecific"><p>Depth Analysis</p></Link>
            </CCardBody>
          </CCard>
        </CCol>
      
-    <CCol sm={8}>
-         <CCard className="mb-4">
+    <CCol  xs={6}>
+         <CCard style={{height:"14cm"}} className="mb-4">
            <CCardHeader>Spontanity</CCardHeader>
            <CCardBody>
              <CChartLine
@@ -173,10 +178,10 @@ const PlatformStats = () => {
                  ],
                }}
              />
+              <Link to="/spontanity"><p>Depth Analysis</p></Link>
            </CCardBody>
          </CCard>
        </CCol>
-  
        </CRow>
       </div>
     </Container>

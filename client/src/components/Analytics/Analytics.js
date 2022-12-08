@@ -26,11 +26,11 @@ import Graphs from "../Xtras/Graphs.js";
 const Analytics = () => {
    
   return(
-  <div>
-  <div>
+  <div class="new">
+  <div >
   <Sidenav/>
   </div>
-    <div  className="wrapper d-flex flex-column min-vh-100 ">
+    <div  className="wrapper d-flex flex-column  ">
       <Container className="body flex-grow-1 px-3">
       <AdminStats/>
       </Container>

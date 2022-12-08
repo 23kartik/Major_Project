@@ -2,6 +2,7 @@ import React from 'react'
 import {Container, Paper} from "@material-ui/core";
 import { CCard, CCardBody, CCol, CCardHeader, CRow } from '@coreui/react'
 import { cilBell, cilEnvelopeOpen, cilList, cilMenu } from '@coreui/icons'
+import { Link } from 'react-router-dom';
 import {
   CChartBar,
   CChartDoughnut,
@@ -21,21 +22,21 @@ const Favourite = () => {
   return (
     <div>
       <UserSidenav  />
-      <Container style={{marginLeft:"6.5cm"}}  className="wrapper d-flex flex-column min-vh-100 ">
-    <CCol xs={11}>
+      <Container style={{marginLeft:"8.5cm"}}  className="wrapper d-flex flex-column min-vh-100 ">
+    <CCol style={{marginLeft:"-2cm"}} xs={11}>
        <br />
       
          <DocsCallout
            name="Chart"
            href="components/chart"
-           content="Content Goes Here"
+           content="Most Viewed and Most Liked platforms as the name suggests shows a pie chart about which platform was most used and most liked by the users of Event Hub."
          /><br />
  
        </CCol>
    
       <div  className="body flex-grow-1 px-3">
       <CRow >
-        <CCol xs={4}>
+        <CCol xs={5}>
          <CCard className="mb-4">
            <CCardHeader>Most viewed Platform</CCardHeader>
            <CCardBody>
@@ -51,10 +52,11 @@ const Favourite = () => {
                  ],
                }}
              />
+             <Link to="mostviewed"><p>Depth Analysis</p></Link>
            </CCardBody>
          </CCard><br/><br/>
        </CCol>
-       <CCol xs={4}>
+       <CCol xs={5}>
          <CCard className="mb-4">
            <CCardHeader>Most Liked Platform</CCardHeader>
            <CCardBody>
@@ -70,6 +72,7 @@ const Favourite = () => {
                }}
              />
            </CCardBody>
+           <Link to="mostliked"><p>Depth Analysis</p></Link>
          </CCard>
        </CCol>
        </CRow>

@@ -235,7 +235,7 @@ const Graphs = () => {
                   },
 
                    {
-                     label: 'Coding Ninjas',
+                     label: 'CSES',
                      backgroundColor: 'rgba(151, 187, 205, 0.2)',
                      borderColor: 'pink',
                      pointBackgroundColor: 'rgba(151, 187, 205, 1)',

@@ -5,7 +5,7 @@ import { CSmartTable } from '@coreui/react-pro'
 
 import Sidenav from './Sidenav.js'
 
-
+import './UserStats.css'
 
 import { useSelector, useDispatch } from 'react-redux'
 import {Container, Paper} from "@material-ui/core";
@@ -204,22 +204,18 @@ const UserStats = () => {
     }
 
   return (
-<div>
+<div class="new4">
 <Sidenav/>
 <Container style={{marginLeft:"6.5cm"}}  className="wrapper d-flex flex-column min-vh-100 ">
     <CCol xs={11}>
        <br />
       
-         <DocsCallout
-           name="Chart"
-           href="components/chart"
-           content="Content Goes Here"
-         /><br />
+         <br />
  
        </CCol>   
    <div  className="body flex-grow-1 px-3">
-   <CCard style={{width:"30cm"}} className="mb-4">
- <CSmartTable
+   <CCard  style={{width:"30cm"}} className="mb-4">
+ <CSmartTable 
     activePage={3}
     cleaner
     clickableRows

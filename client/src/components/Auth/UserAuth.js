@@ -51,7 +51,7 @@ const UserAuth = () => {
 
     try {
       dispatch({ type: AUTH, data: { result, token } });
-      history.push("/usersidenav");
+      history.push("/userperforma");
     } catch (error) {
       console.log(error);
     }

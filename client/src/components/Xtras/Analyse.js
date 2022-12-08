@@ -62,8 +62,8 @@ import {
   import WorkIcon from '@material-ui/icons/Work';
   import { CCallout, CLink } from '@coreui/react'
   import  DocsCallout  from '../Analytics/DocsCallout.js'
-  import '../Analytics/Analytics.css'
-
+  // import '../Analytics/Analytics.css'
+import './Analyse.css'
 
   import { CCollapse ,CBadge} from '@coreui/react'
   import { CSmartTable } from '@coreui/react-pro'
@@ -78,7 +78,7 @@ const Analyse = () => {
   return (
     <div>
     <UserSidenav/>
-    <Container style={{marginLeft:"6.5cm"}}  className="wrapper d-flex flex-column min-vh-100 ">
+    <Container class="new6" style={{marginLeft:"6.5cm"}}  className="wrapper d-flex flex-column min-vh-100 ">
     <CCol xs={11}>
        <br />
       
